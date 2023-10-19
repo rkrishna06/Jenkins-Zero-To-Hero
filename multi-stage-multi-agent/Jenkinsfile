@@ -19,10 +19,10 @@ pipeline {
     }
     stage('DB') {
       agent {
-        docker { 'MYSQL:latest' }
+        docker {image: MYSQL:latest' }
       }
       steps {
-        sh 'select  from xyz'
+        sh 'select * from xyz'
       }
     }
   }
